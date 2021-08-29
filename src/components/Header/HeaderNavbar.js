@@ -4,12 +4,9 @@ import classes from "./styles/HeaderNavbar.module.css";
 
 import HeaderNavItem from "./HeaderNavItem";
 import Modal from "../Common/Modal/Modal";
-import { useHistory } from "react-router-dom";
 import { navbar } from "../../menus/NavbarHeader";
 
 const HeaderNavbar = (props) => {
-  const history = useHistory();
-  console.log(history.location);
   const { isNavMb, hiddenSubnav } = props;
   const [isRender, setIsRender] = useState(false);
 

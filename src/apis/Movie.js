@@ -12,9 +12,9 @@ export async function getTopMovies(type) {
   return transformNData(0, 10, data);
 }
 
-export async function getMovies(requestData) {
+export async function getMovies({ params = "", pageNumber = 1 }) {
   const response = await fetch(
-    `${DOMAIN_URL}/discover/movie?language=en-US&${requestData.params}&include_video=true&api_key=797d08dc86cbab298803421b8affd522&page=${requestData.pageNumber}&with_watch_monetization_types=flatrate`
+    `${DOMAIN_URL}/discover/movie?language=en-US&${params}&include_video=true&api_key=797d08dc86cbab298803421b8affd522&page=${pageNumber}&with_watch_monetization_types=flatrate`
   );
   const data = await response.json();
   if (!response.ok) {

@@ -12,9 +12,13 @@ export async function getTopTrending() {
   return transformData(data);
 }
 
-export async function getTrending(dataRequest) {
+export async function getTrending({
+  type = "tv",
+  time = "all",
+  pageNumber = 1,
+}) {
   const response = await fetch(
-    `${DOMAIN_URL}/trending/${dataRequest.type}/${dataRequest.time}?api_key=797d08dc86cbab298803421b8affd522&page=${dataRequest.pageNumber}`
+    `${DOMAIN_URL}/trending/${type}/${time}?api_key=797d08dc86cbab298803421b8affd522&page=${pageNumber}`
   );
   const data = await response.json();
   if (!response.ok) {

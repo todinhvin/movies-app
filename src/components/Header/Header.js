@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { searchedData } from "../../apis/Search";
+import { getDataSearched } from "../../apis/Search";
 import useHttp from "../../hooks/use-http";
 import Card from "../Common/Card/Card";
 import Container from "../Common/Container/Container";
@@ -12,7 +12,7 @@ const Header = (props) => {
   const [isNavMb, setIsNavMb] = useState(false);
   const [hiddenSubnav, setHiddenSubnav] = useState(true);
   const [dataSearched, setDataSearched] = useState([]);
-  const { data, isLoading, error, sendRequest } = useHttp(searchedData);
+  const { data, isLoading, error, sendRequest } = useHttp(getDataSearched);
   const [valueSearch, setValueSearch] = useState("");
   const onCloseNavbar = () => {
     setIsNavMb(false);
@@ -27,11 +27,10 @@ const Header = (props) => {
   useEffect(() => {
     setDataSearched(data);
   }, [data]);
-  console.log(dataSearched);
 
   useEffect(() => {
     if (valueSearch.trim().length !== 0) {
-      sendRequest({ data: valueSearch });
+      sendRequest({ query: valueSearch });
     } else {
       setDataSearched([]);
     }

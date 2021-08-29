@@ -1,9 +1,9 @@
 import { DOMAIN_URL } from "../constant/domain";
 import { transformData } from "../lib/transformData";
 
-export async function getDetail(requestData) {
+export async function getDetail({ type = "", id = "" }) {
   const response = await fetch(
-    `${DOMAIN_URL}/${requestData.type}/${requestData.id}?api_key=797d08dc86cbab298803421b8affd522&language=en-US`
+    `${DOMAIN_URL}/${type}/${id}?api_key=797d08dc86cbab298803421b8affd522&language=en-US`
   );
   const data = await response.json();
   if (!response.ok) {
@@ -24,9 +24,9 @@ export async function getDetail(requestData) {
   };
 }
 
-export async function getVideo(requestData) {
+export async function getVideo({ type = "", id = "" }) {
   const response = await fetch(
-    `${DOMAIN_URL}/${requestData.type}/${requestData.id}/videos?api_key=797d08dc86cbab298803421b8affd522&language=en-US`
+    `${DOMAIN_URL}/${type}/${id}/videos?api_key=797d08dc86cbab298803421b8affd522&language=en-US`
   );
   const data = await response.json();
   if (!response.ok) {
@@ -35,9 +35,9 @@ export async function getVideo(requestData) {
   return data.results[0].key;
 }
 
-export async function getRecommendation(requestData) {
+export async function getRecommendation({ type = "", id = "" }) {
   const response = await fetch(
-    `${DOMAIN_URL}/${requestData.type}/${requestData.id}/recommendations?api_key=797d08dc86cbab298803421b8affd522&language=en-US&page=1`
+    `${DOMAIN_URL}/${type}/${id}/recommendations?api_key=797d08dc86cbab298803421b8affd522&language=en-US&page=1`
   );
   const data = await response.json();
   if (!response.ok) {
@@ -46,9 +46,9 @@ export async function getRecommendation(requestData) {
   return transformData(data);
 }
 
-export async function getSimilar(requestData) {
+export async function getSimilar({ type = "", id = "" }) {
   const response = await fetch(
-    `${DOMAIN_URL}/${requestData.type}/${requestData.id}/similar?api_key=797d08dc86cbab298803421b8affd522&language=en-US&page=1`
+    `${DOMAIN_URL}/${type}/${id}/similar?api_key=797d08dc86cbab298803421b8affd522&language=en-US&page=1`
   );
   const data = await response.json();
   if (!response.ok) {
