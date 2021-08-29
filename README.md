@@ -16,7 +16,9 @@ You will also see any lint errors in the console.
 
 This website was created by using : HTML, CSS, JS, ReactJS
 ![image](https://user-images.githubusercontent.com/69115412/131245170-e055996c-484c-4ff9-a757-fbbe4274d1cf.png)
+
 Support devices : PC, Mobile
+
 ![image](https://user-images.githubusercontent.com/69115412/131245322-205a6215-44c8-4fe4-b4a6-d0ca6b635b5a.png)
 
 Movies page
