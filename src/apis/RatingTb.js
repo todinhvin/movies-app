@@ -1,4 +1,4 @@
-import { DOMAIN_URL } from "../constant/domain";
+import { BASE_URL  } from "../constant/baseURL";
 import { transformNData } from "../lib/transformData";
 
 export async function getTopPopular(type) {
