@@ -1,0 +1,42 @@
+.footer {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.society {
+  display: flex;
+  align-items: center;
+}
+
+.society-item {
+  display: block;
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  background: #263137;
+  filter: brightness(0.8);
+  transition: all 0.3s;
+}
+
+.society-item i {
+  font-size: 2rem;
+  line-height: 40px;
+}
+
+.society-item:hover {
+  filter: brightness(1);
+}
+
+button.btn-footer {
+  background-color: red;
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}

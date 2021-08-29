@@ -1,0 +1,145 @@
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.container-slider {
+  display: inline-flex;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: 350px;
+  cursor: pointer;
+  border-radius: 3px;
+  scrollbar-width: none;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+.slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+
+.slider-img {
+  width: 864px;
+  height: 350px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.slider-active {
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  margin: 0 5px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.dot.active {
+  background: #b71c1c;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  /* display: none; */
+}
+
+.title {
+  line-height: 3rem;
+  max-height: 6rem;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.judge {
+  margin-bottom: 30px;
+}
+
+.rating {
+  display: inline-block;
+  color: #b5e745;
+  margin-right: 20px;
+  font-size: 1.4rem;
+}
+
+.rating i {
+  margin-right: 4px;
+  color: #b5e745;
+}
+
+.first-air-date {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.overview {
+  --height: 2rem;
+  font-size: 1.4rem;
+  line-height: var(--height);
+  max-height: calc(var(--height) * 4);
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  margin-bottom: 60px;
+}
+
+.btn-watch {
+  font-size: 1.5rem;
+  width: 100px;
+  color: #fff;
+  background-color: #b71c1c;
+  margin-top: auto;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 63.96875em) {
+  .container-slider {
+    overflow: unset;
+    height: 615px;
+  }
+
+  .content {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    position: unset;
+  }
+  .overview,
+  .judge {
+    margin-bottom: 15px;
+  }
+
+  .dots {
+    top: 53%;
+    right: -50px;
+  }
+}

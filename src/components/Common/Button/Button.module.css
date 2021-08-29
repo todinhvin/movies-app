@@ -1,0 +1,26 @@
+.button {
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button-wide {
+  width: 90%;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  margin-left: 5%;
+}
+
+.button-wide:hover {
+  background-color: #b71c1c;
+}

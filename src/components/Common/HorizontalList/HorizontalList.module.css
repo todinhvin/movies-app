@@ -1,0 +1,35 @@
+.list-horizontal {
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  transition: all 0.3s;
+  scroll-behavior: smooth;
+}
+
+.list-horizontal::-webkit-scrollbar {
+  width: 0;
+}
+
+li.list-item {
+  animation: unset;
+}
+
+.list-item:hover {
+  animation: hoverOn linear 0.4s;
+}
+
+@keyframes hoverOn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

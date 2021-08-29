@@ -1,0 +1,16 @@
+.container {
+  overflow: hidden;
+  padding: 16px 0;
+}
+
+.list {
+}
+.list-1 {
+}
+.title {
+  font-size: 3rem;
+  color: #b5e745;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-bottom: 16px;
+}

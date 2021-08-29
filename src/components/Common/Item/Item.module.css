@@ -1,0 +1,257 @@
+.item {
+  position: relative;
+  border-radius: 3px;
+  transition: all 0.4s;
+  border-radius: 3px;
+  overflow: hidden;
+  animation: fadeIn 0.2s linear;
+  user-select: none;
+}
+
+li.table-item {
+  margin-bottom: 30px;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.item-img {
+  position: relative;
+  cursor: pointer;
+  flex: 1;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  height: 100%;
+}
+
+.img-not-found {
+  height: 100%;
+}
+
+.icon-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: none;
+  animation: fadeIn ease-in 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.item-img span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 4rem;
+  color: rgba(238, 235, 235, 0.9);
+}
+
+.item-img:hover .icon-play {
+  display: block;
+}
+
+.item-img:hover ~ .info,
+.item-img:hover ~ .label {
+  opacity: 0.7;
+}
+
+.vote-average {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  color: yellow;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+
+.vote-average i {
+  color: currentColor;
+  margin-right: 4px;
+}
+
+.info {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 7px;
+  list-style: 1.6rem;
+  height: 1.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #f32116;
+}
+
+.release-date {
+  display: block;
+  margin-top: 10px;
+  color: rgb(156, 153, 153);
+  margin-top: auto;
+}
+
+/* Ratings table item */
+
+li.ratingtb-item {
+  margin-top: 16px;
+  position: relative;
+}
+
+li.ratingtb-item .link {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  padding: 6px 2px;
+}
+
+li.ratingtb-item .item-img {
+  position: relative;
+  width: 25%;
+  flex: unset;
+}
+
+li.ratingtb-item .item-img span i {
+  font-size: 3rem;
+}
+
+li.ratingtb-item .item-img:hover .icon-play {
+  display: block;
+}
+
+li.ratingtb-item .item-img:hover ~ .info {
+  opacity: 0.7;
+}
+
+li.ratingtb-item .img {
+  width: 100%;
+  object-fit: cover;
+}
+
+li.ratingtb-item .info {
+  display: block;
+  margin-left: 20px;
+  margin-top: 0;
+  height: unset;
+  font-size: 1.3rem;
+  transition: all 0.2s;
+}
+
+li.ratingtb-item .info:hover {
+  opacity: 0.8;
+}
+
+li.ratingtb-item .vote-average {
+  position: unset;
+  font-size: 1.3rem;
+  padding: 0;
+  margin-right: 10px;
+  color: #b5e745;
+}
+
+li.ratingtb-item .vote-average i {
+  color: currentColor;
+}
+
+li.ratingtb-item .release-date {
+  display: inline-block;
+  color: #ccc;
+  font-size: 1.3rem;
+}
+
+li.ratingtb-item .release-date i {
+  margin-right: 6px;
+  font-size: 1.3rem;
+}
+
+li.ratingtb-item .title {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+li.ratingtb-item .label {
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: currentColor;
+  color: var(--primary-color);
+  border-radius: 4px 0px 0px 0px;
+}
+
+li.ratingtb-item .label span {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+li.ratingtb-item .label::before {
+  content: "";
+  position: absolute;
+  top: 92%;
+  left: 0;
+  border-width: 0 12.5px 5px;
+  border-style: solid;
+  border-color: transparent currentColor transparent currentColor;
+}
+
+li.ratingtb-item .label::after {
+  content: "";
+  position: absolute;
+  border-width: 4px 0 0 4px;
+  border-style: solid;
+  border-color: transparent currentColor;
+  filter: brightness(60%);
+  top: 0px;
+  right: -4px;
+}
+
+/* List Row 8 Item */
+.list-row-8-img {
+  /* height: 186px; */
+}
+/* Mobile and Tablet */
+@media (max-width: 63.96875em) {
+  .img {
+    height: unset;
+  }
+}
