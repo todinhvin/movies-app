@@ -1,4 +1,4 @@
-import { DOMAIN_URL } from "../constant/domain";
+import { BASE_URL  } from "../constant/baseURL";
 
 export async function getGenres(type) {
   const response = await fetch(
