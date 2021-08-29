@@ -1,4 +1,4 @@
-import { DOMAIN_URL } from "../constant/domain";
+import { BASE_URL  } from "../constant/baseURL";
 import { transformData } from "../lib/transformData";
 
 export async function getDataSearched({ query = "" }) {
